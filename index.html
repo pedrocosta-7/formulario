@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Placas</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
@@ -13,88 +13,27 @@
 <div class="page">
     <header>
         <h1> 
-            Crie e compartilhe<br/>
-            seu evento.
+            Descubra agora se a placa do seu carro pertence a um dos estados mais icônicos do Brasil:
+            Espírito Santo, Rio de Janeiro ou São Paulo!
         </h1>
         <p>
-            O primeiro passo, é preencher esse<br/>
-            formulário de inscrição.
+            O primeiro passo é simples: digite as 3 primeiras letras da placa do seu carro e comece a descoberta!
         </p>
     </header>
 <form id="myform">
     <fieldset> 
         <div class="input-wrapper">
-            <legend>Informações do Evento</legend>
-            <label for="event-title">Título do evento<span>(mínimo 8 caracteres)</span></label>
-            <input minlength="8" type="text" id="event-title"/>
-        </div>
-        <div class="input-wrapper">
-            <label for="event-link">Link do evento<span>(Comece com https://)</span></label>
-            <input type="url" id="event-link"/>
-        </div>
-            <div class="input-wrapper">
-            <label for="event-Whatsapp">Whatsapp para contato<span>(somente números)</span></label>
-            <input type="number" id="event-Whatsapp"/>
-        </div>
-        <div class="input-wrapper">
-            <label for="event-Whatsapp">Informações  extras</label>
-            <textarea id="event-info"></textarea>
-        </div>
-        <div class="input-wrapper">
-            <label for="event-category">Categoria</label>
-            <select id="event-category">
-                <option value="podcast">Podcast</option>
-                <option value="mentorship">Mentoria</option>
-                <option value="live">Ao vivo</option>
-            </select>
+            <label for="event-title"><span>(Somente letras maíusculas)</span></label>
+            <input minlength="3" type="text" id="event-title"/>
         </div>
     </fieldset>
-    <fieldset> 
-        <div class="input-wrapper">
-            <legend>Privacidade</legend>
-       </div>
-       <div class="input-wrapper">
-        <legend>Informações do Evento</legend>
-        <label for="event-email">E-mail do administrador<span>(digite um email válido)</span></label>
-        <input type="email" id="event-email" required/>
-    </div>
-    <div class="input-wrapper">
-        <label for="event-password">Senha de acesso para os participantes<span>(minimo 8 caracteres)</span></label>
-        <input minlength="8" type="password" id="event-password"/>
-    </div>
-    <div class="checkbox-wrapper">
-        <input type="checkbox" id="event-private"/>
-        <label for="event-private">Evento Privado</label>
-    </div>
-    </fieldset>
-    <fieldset> 
-    <div class="input-wrapper">
-            <legend>Dia e Hora</legend>
-    <div class="col-3">
-        <div class="input-wrapper">
-            <label for="event-date">Data</label>
-            <input type="date" id="event-date"/>
-        </div>
-        <div class="input-wrapper">
-            <label for="event-begin">Das</label>
-            <input type="time" id="event-begin"/>
-        </div>
-            <div class="input-wrapper">
-            <label for="event-end">Até</label>
-            <input type="time" id="event-end"/>
-        </div>
-    </div>
-    </fieldset>
-    
 </form>
 <footer>
-    <input 
-    form="myform"
-    class="button" 
-    type="submit" 
-    value="Salvar Evento">
+<button id="button" >
+Enter
+</button>
 </footer>
 </div>
-
+<script src="./script.js"></script>
 </body>
 </html>
