@@ -184,6 +184,14 @@ footer .button {
     background: #04D361;
     border: none;
 }
+#analise{
+    color: #FFF;
+    padding-bottom: 0;
+    height: 36px;
+    border-radius: 8px;
+    background: #4f6d8f;
+    border: none;
+}
 footer .button:hover {
     background: #12bb5e;
 }

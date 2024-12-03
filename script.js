@@ -496,33 +496,41 @@ let SP = [  "BFA", "BFB", "BFC", "BFD", "BFE", "BFF", "BFG", "BFH", "BFI", "BFJ"
 ]
 
 
-
 function handleClick(event){
     event.preventDefault()
     const valorDoInput = document.getElementById("event-title")
     const teste = valorDoInput.value
     if(ES.includes(teste)){
-        alert("ES")
+        alert("Espírito Santo")
     }else if(RJ.includes(teste)){
-        alert("RJ")
+        alert("Rio de Janeiro")
     }else if(SP.includes(teste)){
-        alert("SP")
+        alert("São Paulo")
     }else {
         alert("Não pertence a um desses três estados.")
     }
 
 }
-document.getElementById("button").addEventListener("click", handleClick);
+let qtdES = ES.length
+let qtdRJ = RJ.length
+let qtdSP = SP.length
+function handleClickTwo(event){
+    event.preventDefault()
+    alert(`A quantidade de eventos possíveis no Rio de Janeiro é ${qtdRJ}, enquanto em São Paulo são ${qtdSP}, e no Espírito Santo, ${qtdES}."`)
 
-
-
-
-
-
-/*
-const teste = prompt("Digite as 3 primeiras letras dapaca")
-
-if(ES.includes(teste)){
-    alert("ES")
 }
-    */
+document.getElementById("button").addEventListener("click", handleClick);
+document.getElementById("analise").addEventListener("click", handleClickTwo);
+
+
+
+
+
+
+
+
+
+
+
+
+
