@@ -20,7 +20,24 @@ let ES = ["MOX", "MOY", "MOZ",   "MPA", "MPB",
     "MTG", "MTH", "MTI", "MTJ", "MTK", "MTL",
     "MTM", "MTN", "MTO", "MTP", "MTQ", "MTR",
     "MTS", "MTT", "MTU", "MTV", "MTW", "MTX",
-    "MTY", "MTZ"]
+    "MTY", "MTZ", "OCV", "OCW", "OCX", "OCY", 
+    "ODA", "ODB", "ODC", "ODD", "ODE",
+    "ODF", "ODG", "ODH", "ODI", "ODJ",
+    "ODK", "ODL", "ODM", "ODN", "ODO",
+    "ODP", "ODQ", "ODR", "ODS", "ODT","OCZ",
+    "OVE", "OVF", "OVH", "OVI", "OVJ", "OVK", 
+    "OVL", "OYD", "OYE", "OYF", "OYG", "OYH",
+    "OYI", "OYJ", "OYK", "PPA", "PPB", "PPC",
+    "PPK", "PPL", "PPM", "PPN", "PPO", "PPP",
+    "PPU", "PPV", "PPW", "PPX", "PPY", "PPZ",
+    "PPD", "PPE", "PPF", "PPG", "PPH", "PPI", 
+    "PPQ", "PPR", "PPS", "PPT", "PPJ", "QRB",
+    "QRC", "QRD", "QRE", "QRF", "QRG", "QRH",
+    "QRI", "QRJ", "QRK", "QRL", "QRM", "RBA",
+    "RBB", "RBC", "RBD", "RBE", "RBF", "RBG",
+    "RBH", "RBI", "RBJ", "RQM", "RQN", "RQP",
+    "RQQ", "RQR", "RQS", "RQT", "RQU", "RQV",
+]
 
 let RJ = ["KMF", "KMG", "KMH", "KMI", "KMJ", "KMK", "KML", "KMM", "KMN",
   "KMO", "KMP", "KMQ", "KMR", "KMS", "KMT", "KMU", "KMV", "KMW", "KMX",
@@ -113,7 +130,12 @@ let RJ = ["KMF", "KMG", "KMH", "KMI", "KMJ", "KMK", "KML", "KMM", "KMN",
   "LGD", "LGE", "LGF", "LGG", "LGH", "LGI", "LGJ", "LJC", "LJD", "LJE",
   "LJF", "LJG", "LJH", "LJI", "LJJ", "LMC", "LMD", "LME", "LMF", "LMG",
   "LMH", "LMI", "LMJ", "LPC", "LPD", "LPE", "LPF", "LPG", "LPH", "LPI",
-  "LPJ",
+  "LPJ", "RIP", "RIQ", "RIR", "RIS", "RIT", "RIU", "RIV", "RIW", "RIX",
+  "RJA", "RJB", "RJC", "RJD", "RJE", "RJF", "RJG", "RJH", "RJI", "RJJ", "RJK",
+  "RJL", "RJM", "RJN", "RJO", "RJP", "RJQ", "RJR", "RJS", "RJT", "RJU", "RJV",
+  "RJW", "RJX", "RJY", "RJZ", "RKA", "RKB", "RKC", "RKD", "RKE", "RKF", "RKG",
+  "RKH", "RKI", "RKJ", "RKK", "RKL", "RKM", "RKN", "RKO", "RKP", "RKQ", "RKR",
+  "RKS", "RKT", "RKU", "RKV", "RIY", "RIZ", "RIO"
 ]
 
 let SP = [  "BFA", "BFB", "BFC", "BFD", "BFE", "BFF", "BFG", "BFH", "BFI", "BFJ",
@@ -465,7 +487,8 @@ let SP = [  "BFA", "BFB", "BFC", "BFD", "BFE", "BFF", "BFG", "BFH", "BFI", "BFJ"
   "GJG", "GJH", "GJI", "GJJ", "GJK", "GJL", "GJM", "GJN", "GJO", "GJP",
   "GJQ", "GJR", "GJS", "GJT", "GJU", "GJV", "GJW", "GJX", "GJY", "GJZ",
   "GAE", "GAF", "GAG", "GAH", "GAI", "GAJ", "GKA", "GKB", "GKC", "GKD",
-  "GKE", "GKF", "GKG", "GKH", "GKI"
+  "GKE", "GKF", "GKG", "GKH", "GKI", "QSN", "QSO", "QSP", "QSQ", "QSR",
+  "QSS", "QST", "QSU", "QSV", "QSW", "QSX", "QSY", "QSZ"
 
 
 
@@ -480,14 +503,14 @@ function handleClick(event){
     const teste = valorDoInput.value
     if(ES.includes(teste)){
         alert("ES")
-    }
-    if(RJ.includes(teste)){
+    }else if(RJ.includes(teste)){
         alert("RJ")
-    }
-    if(SP.includes(teste)){
+    }else if(SP.includes(teste)){
         alert("SP")
+    }else {
+        alert("Não pertence a um desses três estados.")
     }
-    
+
 }
 document.getElementById("button").addEventListener("click", handleClick);
 
